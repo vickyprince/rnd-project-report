@@ -5,52 +5,14 @@
     \section{Introduction}
     \label{sec:introduction}
 
-    This is a template for MAS R\&D projects, based on \emph{IEEETran}.
-    Here are some preliminaries about some common things you need to do to use the template:
-    \begin{itemize}
-        \item Add your references to the file \emph{references.bib} and cite them as Mustermann and Smith \cite{referenceexample} (if there are more than three authors, cite as Mustermann et al. \cite{referenceexample}).
-        \item Refer to sections as Sec. \ref{sec:introduction}.
-        \item You can include figures as follows (note that the figure caption is below the figure).
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.8\linewidth]{figures/b-it-logo.pdf}
-            \caption{My caption}
-            \label{fig:figureexample}
-        \end{figure}
-        Refer to figures as Fig. \ref{fig:figureexample}.
-        \item You can add tables as follows (note that the table caption is above the table).
-        \begin{table}[ht]
-            \caption{My caption}
-            \label{tab:tableexample}
-            \begin{tabular}{M{0.45\linewidth} M{0.45\linewidth}}
-                \hline
-                \cellcolor{gray!10!white} Header 1 & \cellcolor{gray!10!white} Header 2 \\\hline
-                Cell 1 & Cell 2 \\\hline
-                Cell 3 & Cell 4 \\\hline
-            \end{tabular}
-        \end{table}
-        Refer to tables as Tab. \ref{tab:tableexample}.
-        \item You can add equations as follows.
-        \begin{equation}
-            f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left( \frac{x - \mu}{\sigma} \right)^2}
-            \label{eq:equationexample}
-        \end{equation}
-        Refer to equations as Eq. \ref{eq:equationexample}.
-    \end{itemize}
+    Robotic manipulation, a key domain within robotics, seeks to enhance how robots interact with their environment in precise and meaningful ways. Among various manipulation tasks, object stacking stands out due to its foundational importance for testing robotic precision, planning, and adaptability. This paper presents a focused study on developing a robotic arm's capability to perform a specific stacking task within a controlled simulation environment. Our research harnesses a sophisticated simulation framework, allowing us to train and test our robotic arm in a virtual setting before any real-world application.
 
-    \subsection{Motivation}
-    \label{sec:introduction:motivation}
-
-    Describe the context of your work and the motivation for it.
-
-    \subsection{Problem Statement}
-    \label{sec:introduction:problem_statement}
-
-    Describe the problem you are addressing in the work.
-
-    \subsection{Proposed Approach}
-    \label{sec:introduction:proposed_approach}
-
-    Write a short summary of your proposed approach.
+    The task at hand involves the robot accurately stacking two cubes of distinct colors: placing a red cube atop a green cube. This seemingly simple task encapsulates multiple underlying challenges fundamental to robotic manipulation, including object recognition, spatial reasoning, and the delicate control of force and balance. The specificity of the task allows for a detailed investigation into the manipulation capabilities of the robot, providing insights that are applicable to a broader range of tasks in robotic manipulation.
+    
+    Utilizing a simulation environment for this purpose offers numerous advantages, including the ability to rapidly prototype and test various approaches without the need for physical trials, which can be time-consuming and resource-intensive. Furthermore, it allows for precise control over experimental conditions, ensuring that the robot's performance can be evaluated consistently across different trials.
+    
+    Our approach involves training the robot using a combination of reinforcement learning and supervised learning techniques, enabling it to learn from both programmed instructions and feedback from its interactions within the simulation environment. This mixed-methods approach aims to equip the robot with the flexibility and precision required to successfully complete the stacking task, with the ultimate goal of applying these learned skills to real-world scenarios.
+    
+    In summary, this paper documents our journey and findings in teaching a robotic arm to execute a precise stacking task within a simulated environment. By focusing on this specific task, we aim to contribute valuable insights to the field of robotic manipulation, showcasing the potential of simulation-based training in developing advanced robotic skills.
 
 \end{document}

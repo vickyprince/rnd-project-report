@@ -5,8 +5,18 @@
     \section{Methodology}
     \label{sec:methodology}
 
-    Describe all conceptual details about your approach in this section.
-    Add any necessary subsections to improve the presentation.
+    The ManiSkill2 framework, which is intended to support the development of broadly applicable robot manipulation abilities, serves as the foundation for the project's methodology. The fundamental component of this strategy is imitation learning, a machine learning technique that lets robots pick up difficult jobs by mimicking the actions of experts. This is especially helpful in situations where it is impractical to programme every possible course of action and result. The project makes use of an expert demonstration dataset, which is kept in an H5 file and consists of a series of observations and related actions. The details of the project are provided below. The objective is to allow a robot to pick up a red cube and position it steadily on top of a green cube without having to grab it.
 
-    Feel free to rename this section to better reflect the concrete topic you are discussing.
+    \begin{itemize}
+        \item Goal: Take a red cube and set it on top of a green cube. 
+        \item Success Metric: The red cube is steadily positioned on top of the green one without being gripped. 
+        \item Demonstrations: The format for the demonstration is 1,000 successful trajectories. 
+        \item Evaluation Protocol: 100 episodes with varying robot joint initial positions and initial cube poses. 
+    \end{itemize}
+    
+    The purpose of these examples is to train a neural network policy that controls the movements of the robot. By customising the baseline policy to the cube stacking environment and optimising the training settings, the project expands upon the cube selection methods offered by ManiSkill2. The neural network uses a Tanh activation layer to make sure that the output actions are within the [-1, 1] range, matching the robot's action space. It is built using three hidden layers, each of size 128. Full connected layers and ReLU activation functions are also used in its construction. Because of this structure, the robot can learn from examples, which greatly reduces the amount of complex manipulation tasks that require manual programming.
+    
+    The training process iteratively increases the precision of the policy by calculating loss using SmoothL1Loss, optimising weight using the Adam optimizer, and performing forward runs through the policy network. Determining the robot's stacking success rate is essential for tracking improvements in performance. The ManiSkill2 environment and the gymnasium library, which provide a standardised framework for environment interaction, observation, and control, further complement the technique. This all-encompassing approach integrates neural network training, efficient data management, imitation learning, and careful assessment to enable skilled robot manipulation in challenging tasks.
+    
+    Multiple controllers, including joint position, delta joint position, and delta end-effector pose, are supported by the ManiSkill2 environment. These controllers convert input actions into joint torques that power the robot's motors. The ability to support several controllers is crucial for customising demonstration action spaces to meet the unique needs of the current activity. The project's joint position controller demonstrations have been modified for training in a delta end-effector pose controller setup for rigid-body scenarios. This modification is essential to the project's state-based methodology, which makes use of a dictionary of states that includes ground truth object information (e.g., object positions), task-specific goal information, and robot proprioceptive data. The robot proprioceptive information includes joint positions, joint velocities, the pose of the robot base, and the pose of the gripper's tool center point if the robot uses a two-finger gripper. This rich state information is pivotal for the robot to understand and interact with its environment effectively, enabling it to perform the task of stacking cubes with precision and reliability.
 \end{document}

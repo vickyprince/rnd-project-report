@@ -5,6 +5,26 @@
     \section{Related Work}
     \label{sec:related_work}
 
-    Summarise the relevant related work in this section and position your work with respect to the related work.
+    Research in robotic manipulation has focused on enabling robots to interact with dynamic and unstructured environments, such as the Maniskill 2 soft-body and rigid-body tasks. Several approaches have been proposed to tackle similar challenges.
+    
+    \begin{figure}
+        \includegraphics{figures/Screenshot 2024-03-15 at 8.47.37 PM.png}
+        \caption{Maniskill2}
+        \label{fig:maniskill2}
+    \end{figure}
+
+
+    Many researchers have explored the application of reinforcement learning (RL) techniques for robotic grasping and manipulation tasks. Approaches including Policy Gradient Methods such as Demonstration-Augmented Policy Gradient(DAPG), Proximal Policy Optimization (PPO), Soft Actor-Critic (SAC), Generative-Adversarial Imitation Learning(GAIL)  have been utilized to train robotic agents to grasp and manipulate objects in diverse environments for rigid-body tasks similar to our approach.
+    
+    SAPIEN ManiSkill \cite{ManiSkillChallenge} has proposed a full-physics simulation benchmark for manipulating a variety of 3D objects. This benchmark allows agents to be trained using a large-scale dataset of demonstrations and assesses their generalization ability in unseen scenarios in testing environments. 
+    
+    In \cite{gao2023two} the authors have proposed a novel two-stage fine-tuning strategy that aims to further enhance the generalization capability of model based on the Maniskill2 benchmark. In this work, they utilize PointNet to extract the point cloud features, and then employ Reinforcement Learning or Imitation Learning algorithms \cite{xu2014reinforcement} to ascertain the agent's direction and traveling distance. Once again the usage of Proximal Policy Gradient (PPO) \cite{schulman2017proximal} for rigid-body tasks and Behavior Cloning (BC) \cite{torabi2018behavioral} for soft-body tasks can be seen. 
+    
+    In the robotics field, the need for manipulation benchmarks is well acknowledged, and it is still a hot topic of conversation at robotic manipulation workshops. Large datasets of object scans have typically been the focus of earlier works. 
+    Previous studies concerning  datasets have primarily centered around extensive collections of object scans. While these datasets are valuable for various simulation and planning purposes, as well as for benchmarking in experimental research on grasping and manipulation is limited. One notable limitation in prior research is that most manipulations in these datasets are not easily accessible to other researchers, thus hindering their use in manipulation experiments, except for a few cases.
+    
+    This current endeavour stands out due to its dual purpose: it not only furnishes a wealth of information about objects essential for many simulation and planning methodologies but also ensures the availability of the actual demonstrations for researchers to employ in experimental settings for learning from demonstrations \cite{mu2021maniskill}.
+
+
 
 \end{document}

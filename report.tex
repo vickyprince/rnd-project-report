@@ -20,7 +20,7 @@
 \usepackage{algpseudocode}
 \usepackage{siunitx}
 \usepackage[framemethod=TikZ]{mdframed}
-
+\graphicspath{ {./figures/} }
 \mdfdefinestyle{frameStyle}{%
 	roundcorner=5pt,
 	backgroundcolor=white}
@@ -46,16 +46,27 @@
 
 \begin{document}
 
-\title{Your Project Title}
+\title{Learning to Grasp and Stack Cube using Maniskill2 Environment}
 
-\author{Your Name
+\author{
+        Arnold Dsouza\\
+        % \texttt{arnold.dsouza@smail.inf.h-brs.de}\\
+        \and
+        Pallavi Aithal Narayan\\
+        % \texttt{pallavi.narayan@smail.inf.h-brs.de}
+        \and
+        Salvin George\\
+        % \texttt{salvin.george@smail.inf.h-brs.de}
+        \and
+        Vicky Prince Victor\\
+        % \texttt{vicky.victor@smail.inf.h-brs.de}
         % <-this % stops a space
 \thanks{$^*$Submitted to the Department of Computer Science at Hochschule Bonn-Rhein-Sieg in partial fulfilment of the requirements for the degree of Master of Science in Autonomous Systems}
-\thanks{$^{\dagger}$Supervised by Supervisor 1 (Affiliation) and Supervisor 2 (Affiliation)}
-\thanks{$^{\ddagger}$Submitted in Month 20XX}} %
+\thanks{$^{\dagger}$Supervised by Dr. Mitrevski, Aleksandar}
+\thanks{$^{\ddagger}$Submitted in March 2024}} %
 % \thanks{Manuscript received October Day, 2022; revised Month Day, 2023.}}
 
-\markboth{R\&D Project Report, Master of Autonomous Systems, Hochschule Bonn-Rhein-Sieg}%
+\markboth{Robot Learning Project Report, Master of Autonomous Systems, Hochschule Bonn-Rhein-Sieg}%
 {Your Name: Your Project Title}
 
 \maketitle
@@ -63,23 +74,20 @@
 \subfile{subfiles/abstract}
 
 \begin{IEEEkeywords}
-Write up to three keywords about your work.
+Robotic Manipulation, Simulation Training, Reinforcement Learning.
 \end{IEEEkeywords}
 
 % Add your content by filling out these
 \subfile{subfiles/introduction}
 \subfile{subfiles/related_work}
-\subfile{subfiles/background}
 \subfile{subfiles/methodology}
 \subfile{subfiles/evaluation}
 \subfile{subfiles/conclusions}
 
-\section*{ACKNOWLEDGMENT}
-Write your acknowledgments here.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
-\subfile{subfiles/appendix}
+
 
 \end{document}

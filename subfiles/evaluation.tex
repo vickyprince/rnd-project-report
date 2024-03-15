@@ -5,5 +5,18 @@
     \section{Evaluation}
     \label{sec:evaluation}
 
-    If your work involved experiments, describe the experimental setup and the results in this section.
+    The ManiSkill2 challenging environments are used to evaluate the effectiveness of the Behavior Cloning approach in acquiring robot manipulation abilities\cite{OpenAI(2022)}. A variety of manipulation tasks with varying difficulty levels are provided in these environments, enabling a thorough evaluation of the learned policy's capabilities.
+
+    The success rate is chosen as the primary metric to quantify the policy's performance. The percentage of instances where the agent achieves the specified objective of the environment is reflected in this indicator. The achievement of a block stacking endeavor might be defined as the achievement of all the blocks in the desired arrangement. The episodic success rate is a valuable metric because it directly measures the agent's ability to complete the intended task. This is crucial for real-world robotic applications.
+
+    To ensure an unbiased evaluation and prevent overfitting to the training data, we employ a separate evaluation phase after training the policy using BC. This is to ensure an unbiased evaluation and prevent overfitting to the training data. During evaluation, the weights of the policy's weights are frozen $$(th.no_grad())$$  to assess its true generalization capability on unseen episodes.
+
+    To account for the inherent variability and stochasticity present in manipulation tasks, the evaluation process involves running the agent on multiple evaluation episodes. This enables a more statistically robust assessment of the policy's accomplishments and its generalizability. The trained policy is used by the agent to interact with the environment in each episode. If the agent achieves the defined goal, the episode is successful.
+    
+    The success rate for a particular episode is calculated by dividing the number of successful episodes by the total number of evaluation episodes. A high percentage of outcomes indicates that the learned policy is capable of imitating the expert's conduct and achieving the objectives in the majority of evaluation episodes, indicating successful application of the lessons learned from the demonstrations. A low rate of success, on the other hand, suggests weaknesses in the learned policy, possibly resulting from inadequate documentation of expert actions or difficulties with particular job complexities.
+
+    The periodic success rate is a useful metric, but it might be useful to take into account additional task-specific metrics, depending on the particular manipulation task. The time it takes to accomplish the task or the quality of the result could be one of the factors.
+
+    We get a comprehensive assessment of the policy's capability learned through BC on ManiSkill manipulation tasks by employing a periodic success rate and adhering to these rigorous evaluation procedures. This assessment assesses the efficacy of the BC strategy for robot skill acquisition in this challenging field.
+    
 \end{document}
